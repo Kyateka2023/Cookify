@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Untitledlogo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- hold the navigation -->
+    <header id="header">
+        <h2 class="banner">Cookify <i class="fa-solid fa-cloud-meatball"></i></h2>
+        <nav><a href="" class="home">Home</a>
+            <a href="" class="recipe">Recipes</a>
+            <a href="" class="about">About Us</a>
+            <a href="" class="contact">Contact Us</a>
+        </nav>
+        <a href="#" class="member">Become a Member</a>
+                    
+    </header>
+
+    <!-- brief summary on content to be found on other pages -->
+    <main class="main">
+        <section class="first" id="first">
+            <div class="slogan">
+                <h1 class="h1">Flavors that ignite your passion for cooking!</h1>
+                <button class="button-first">Explore Recipes <span class="arrow">&#10170;</span></button>
+            </div>
+            <div class="image">
+                <img src="food.png" alt="Food Image" class="food-img">
+            </div>
+        </section>
+    </main>
+
+    <!-- other info about the website like social media. -->
+    <footer></footer>
+
+    <script>
+        const header = document.getElementById("header");
+
+        //create a div element and let it be inside the div element
+        const mobileMenu = document.createElement("div");
+        mobileMenu.setAttribute("class", "mobileMenu");
+
+        header.appendChild(mobileMenu);
+
+        //create an i element  for bars let it be the child to a div.
+        const i = document.createElement("i");
+        i.setAttribute("class", "fa-solid fa-bars");
+        i.setAttribute("id", "fa-bars");
+        mobileMenu.appendChild(i);
+
+        //create anchor tags
+        const home = document.createElement("a");
+        const recipe = document.createElement("a");
+        const about = document.createElement("a");
+        const contact = document.createElement("a");
+        const member = document.createElement("a");
+
+        //give them href attributes
+        home.setAttribute("href", "#");
+        recipe.setAttribute("href", "#");
+        about.setAttribute("href", "#");
+        contact.setAttribute("href", "#");
+        member.setAttribute("href", "#");
+
+        //give them class attributes
+        home.setAttribute("class", "home-link");
+        recipe.setAttribute("class", "recipe-link");
+        about.setAttribute("class", "about-link");
+        contact.setAttribute("class", "contact-link");
+        member.setAttribute("class", "member-link");
+
+        //create text nodes
+        const homeText = document.createTextNode("HOME");
+        const recipeText = document.createTextNode("RECIPE");
+        const aboutText = document.createTextNode("ABOUT");
+        const contactText = document.createTextNode("CONTACT");
+        const memberText = document.createTextNode("BECOME A MEMBER");
+
+        //convert text nodes into children of the anchor tags
+        home.appendChild(homeText);
+        recipe.appendChild(recipeText);
+        about.appendChild(aboutText);
+        contact.appendChild(contactText);
+        member.appendChild(memberText);
+
+        // create a div to store all the div Elements and let it be a child to the mobile menu element.
+        const linkHolder = document.createElement("div");
+        linkHolder.setAttribute("class", "linkHolder"); 
+        linkHolder.setAttribute("id", "linkHolder");
+
+        mobileMenu.appendChild(linkHolder);
+
+        // let all the links be inside the linkHolder
+        linkHolder.appendChild(home);
+        linkHolder.appendChild(recipe);
+        linkHolder.appendChild(about);
+        linkHolder.appendChild(contact);
+        linkHolder.appendChild(member);
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

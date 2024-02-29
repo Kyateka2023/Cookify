@@ -1,0 +1,397 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    /* border: 3px solid red; */
+    min-height: 100dvh;
+    background-color: #BEB7A4;
+
+}
+
+/* Style the headers */
+header
+{
+    border-bottom: 1px solid #FF3F00;
+    padding: 2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10dvh;
+    background-color: #FFFFFC;
+}
+
+nav
+{
+    padding: 0.5rem;
+}
+
+.banner
+{
+    font-size: 2rem;
+}
+
+.fa-cloud-meatball
+{
+    color: #FF7F11;
+}
+
+.home, .about, .recipe, .contact
+{
+    padding: 0.8rem 1rem;
+    width: 150px;
+    display: inline-block;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.home:hover, .about:hover, .recipe:hover, .contact:hover
+{
+    background-color: #BEB7A4;
+    border-bottom: 1px solid black;
+}
+
+.home:active, .about:active, .recipe:active, .contact:active
+{
+    opacity: 0.8;
+    border-bottom: 1px solid black;
+}
+
+.member
+{
+    padding: 0.8rem 1rem;
+    background-color: #FF3F00;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.member:hover
+{
+    opacity: 0.8;
+}
+
+.member:active
+{
+    opacity: 0.6;
+}
+
+/* Mobile menu */
+.mobileMenu
+{
+    display: none;
+}
+
+/* Start styling the main sections. */
+.main
+{
+    /* border: 3px solid lightsalmon; */
+    height: 100%;
+}
+
+.first
+{
+    /* border: 3px solid green; */
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    background-color: #e0dcd2;
+}
+
+.slogan, .image
+{
+    /* border: 3px solid red; */
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.image
+{
+    align-items: center;
+}
+
+.slogan
+{
+    flex-direction: column;
+}
+
+.slogan
+{
+    padding: 0 2rem;
+}
+
+.h1
+{
+    font-size: 3rem;
+}
+
+.food-img
+{
+    width: 100%;
+    height: auto;
+}
+
+.button-first
+{
+    border: none;
+    border-radius: 2.5px;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FF3F00;
+    justify-content: center;
+    background-image: linear-gradient(50deg, #FF3F00 50%, #FF7F11 50%);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button-first:hover
+{
+    transform: scale(1.05);
+    background-color: #FF3F00;
+    opacity: 1;
+}
+
+.button-first:active
+{
+    transform: scale(0.95);
+    background-color: #FF7F11;
+    opacity: 0.9;
+    
+}
+
+.arrow
+{
+    font-size: 2rem;
+    margin-left: 0.2rem;
+}
+
+
+@media screen and (width < 1200px)
+{
+    /* fix the header */
+    
+    .banner
+    {
+        font-size: 1.5rem;
+    }
+
+    .home, .about, .recipe, .contact
+    {
+        padding: 0.6rem 0.8rem;
+        width: 125px;
+        font-size: 0.9rem;
+    }
+    
+    nav 
+    {
+        padding: 0;
+    }
+
+    .member
+    {
+        padding: 0.6rem 0.8rem;
+        width: 170px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (width < 830px)
+{
+    .banner
+    {
+        font-size: 2rem;
+    }
+    
+    nav, .member
+    {
+        display: none;
+    }
+
+    .mobileMenu
+    {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .fa-bars
+    {
+        font-size: 1.5rem;
+        border-radius: 2.5px;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.25s linear, opacity 0.25s linear, transform 0.5s linear, font-size 0.25s linear, border-radius 0.25s linear;
+    }
+    
+    .fa-x
+    {
+        padding: 0.8rem;
+        cursor: pointer;
+        background-color: #FF7F11;
+        transition: background-color 0.25s linear, opacity 0.25s linear, transform 0.5s linear, font-size 0.25s linear, border-radius 0.25s linear;
+    }
+    
+    .fa-x:active
+    {
+        opacity: 0.7;
+    }
+    
+    .fa-bars:hover
+    {
+        background-color: #FF7F11;
+    }
+    
+    .fa-bars:active, .fa-x:active
+    {
+        opacity: 0.8;
+    }
+
+    .linkHolder
+    {
+        background-color: whitesmoke;
+        padding: 0.5rem;
+        box-shadow: 5px 5px#000000;
+        position: absolute;
+        top: -1500px;
+        opacity: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        width: 275px;
+        transition: top 0.5s, visibilty 0.85s, opacity 2.5s;
+    }
+    
+    .home-link, .recipe-link, .about-link, .contact-link
+    {
+        text-decoration: none;
+        color: #000000;
+        font-weight: 555;
+        text-align: center;
+        border: 1px solid #FF7F11;
+        margin: 0.2rem 0;
+        padding: 1rem;
+        border-radius: 2.5px;
+        transition: color 0.25s, box-shadow 0.25s, transform 0.25s;
+    }
+    
+    .home-link:hover, .recipe-link:hover, .about-link:hover, .contact-link:hover
+    {
+        color: #FF7F11;
+        box-shadow: 3px 3px #ff8011b4 ;
+    }
+    .home-link:active, .recipe-link:active, .about-link:active, .contact-link:active
+    {
+        color: #FF7F11;
+        box-shadow: 3px 3px #ff801185;
+        transform: scale(0.95);
+    }
+    
+    .member-link
+    {
+        text-decoration: none;
+        color: #000000;
+        font-weight: 700;
+        text-align: center;
+        margin: 0.2rem 0 0 0;
+        padding: 1rem;
+        background-color: #FF3F00;
+        border-radius: 2.5px;
+        transition: opacity 0.25s;
+    }
+    
+    .member-link:hover
+    {
+        opacity: 0.8;
+    }
+
+    .member-link:active
+    {
+        opacity: 0.6;
+    }
+    
+}
+
+@media screen and (width < 769px)
+{
+    .first
+    {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image, .slogan
+    {
+        width: 100%;
+        height: 50%;
+    }
+
+    .slogan
+    {
+        align-items: center;
+    }
+
+    .h1
+    {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .food-img
+    {
+        width: 75%;
+        height: auto;
+    }
+}
+
+@media screen and (width <= 480px)
+{
+    .food-img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .button-first
+    {
+        margin-top: 3rem;
+        font-size: 1rem;
+        font-weight: 600;
+        width: 170px;
+        height: 40px;
+        display: flex;
+    }
+
+    .arrow
+    {
+        font-size: 1rem;
+    }
+    
+}
