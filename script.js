@@ -1,5 +1,5 @@
 const bars = document.getElementById("fa-bars");
-
+console.log(window.innerWidth)
 //get the id for the linkHolder
 const linkHolderId = document.getElementById("linkHolder");
 

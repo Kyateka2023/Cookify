@@ -13,7 +13,6 @@ html
 
 body
 {
-    /* border: 3px solid red; */
     min-height: 100dvh;
     background-color: #BEB7A4;
 
@@ -23,7 +22,7 @@ body
 header
 {
     border-bottom: 1px solid #FF3F00;
-    padding: 2rem 0.5rem;
+    padding: 2rem 1rem;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -103,13 +102,11 @@ nav
 /* Start styling the main sections. */
 .main
 {
-    /* border: 3px solid lightsalmon; */
     height: 100%;
 }
 
 .first
 {
-    /* border: 3px solid green; */
     height: 100dvh;
     display: flex;
     flex-direction: row;
@@ -118,7 +115,6 @@ nav
 
 .slogan, .image
 {
-    /* border: 3px solid red; */
     height: 100%;
     width: 50%;
     display: flex;
@@ -191,10 +187,130 @@ nav
     margin-left: 0.2rem;
 }
 
+/* Offer section starts from here... */
+.offer
+{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h2
+{
+    font-size: 2.5rem;
+    height: 8%;
+    font-family: 'Bungee',Verdana, 'Geneva', Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.offer-image
+{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.image1
+{
+    width: 475px;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.image2
+{
+    margin: 1rem 0.1rem;
+    width: 475px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.breakfast
+{
+    width: 100%;
+    height: 100%;
+}
+
+.sub-image1
+{
+    height: 48%;
+    width: 100%;
+    position: relative;
+}
+
+.lunch
+{
+    width: 100%;
+    height: 100%;
+}
+
+.sub-image2
+{
+    height: 48%;
+    width: 100%;
+    position: relative;
+}
+
+.dinner
+{
+    width: 100%;
+    height: 100%;
+}
+
+.image3
+{
+    margin: 1rem 0;
+    width: 475px;
+    position: relative;
+}
+
+.dessert
+{
+    width: 100%;
+    height: 100%;
+}
+
+.meal-title
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    opacity: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.25s;
+}
+
+.meal-title:hover
+{
+    background-color: #00000060;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.meal-title:active
+{
+    background-color: #00000087;
+    opacity: 1;
+    cursor: pointer;
+}
 
 @media screen and (width < 1200px)
 {
-    /* fix the header */
     
     .banner
     {
@@ -222,7 +338,15 @@ nav
     }
 }
 
-@media screen and (width < 830px)
+@media screen and (width < 963px)
+{
+    .image1, .image2, .image3
+    {
+        flex-grow: 0.5;
+    }
+}
+
+@media screen and (width < 850px)
 {
     .banner
     {
@@ -369,6 +493,21 @@ nav
         width: 75%;
         height: auto;
     }
+
+    .offer
+    {
+        padding: 0.5rem;
+    }
+
+    .h2 
+    {
+        font-size: 2rem;
+    }
+
+    .meal-title
+    {
+        font-size: 1.8rem;
+    }
 }
 
 @media screen and (width <= 480px)
@@ -392,6 +531,17 @@ nav
     .arrow
     {
         font-size: 1rem;
+    }
+
+
+    .h2
+    {
+        font-size: 1.2rem;
+    }
+
+    .meal-title
+    {
+        font-size: 1.5rem;
     }
     
 }
